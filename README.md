@@ -7,7 +7,7 @@ Show customer revies and ratings, and sellers avaliation. Implement tools like a
 Also provides secure purshace options, and FAQ information for support. Esnure data protection and
 transparent privacy policies and create a feedback mechanism for user suggestions.
 
-# Problem
+# Main Problem
 
  Many people struggle to compare car insurance options and understand their coverage needs.
 
