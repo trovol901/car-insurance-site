@@ -12,37 +12,45 @@ transparent privacy policies and create a feedback mechanism for user suggestion
  Many people struggle to compare car insurance options and understand their coverage needs.
 
 # Features
--Policy comparison
+- Fair comparison
 
--Online purshase process
+- Comparison if the car is above or below the market price 
 
-=Easy acess to the staff
+- Online purshase process
 
--Caculator
+= Easy acess to contact the staff
 
--Ratings
+- Caculator
 
--Box for suggestions 
+- Ratings
 
--Profile for Users
+- Box for suggestions 
 
--Search tool bars, for prices, clients budget
+- Profile for Users
+
+- Search tool bars, for prices, clients budget
 
 
 CSS
 ## Technology
-- **Frontend**: 
+*Frontend*:
+
   - CSS: Simple CSS for styling the layout and ensuring a clean user interface.
+    
   - Animations: CSS transitions and animations for enhancing user experience during interactions (like buttons and form submissions).
+
   - Calculator: A JavaScript-based calculator for estimating insurance costs based on user inputs.-
 
  **Backend**: 
   - Node.js: To create a server that handles requests and responses.
+
   - MySQL: For user storage to save user data and preferences.
+  
   - API: Third-party APIs for fetching insurance data.
+  
   - VS for  GitHub for managing code
 
 
 Deployment
 
-- *AWS
+- AWS
