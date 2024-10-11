@@ -13,29 +13,17 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 # Features
 
-- Partnerships with Insurers
-
-- Affiliate programs
-
-- Comparison if the car is above or below the market price 
-
-- Online purshase process
-
-- Easy acess to contact the staff
+- Blog
 
 - Caculator
 
-- Ratings
+- ICBC Autoplan
 
-- Box for suggestions 
+- Buy, Renew or Options
 
-- Profile for Users
 
-- Search tool bars, for prices.
 
-- Blog
 
-CSS
 ## Technology
 *Frontend*:
 
