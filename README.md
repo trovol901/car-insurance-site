@@ -35,6 +35,8 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - Search tool bars, for prices.
 
+- Blog
+
 CSS
 ## Technology
 *Frontend*:
