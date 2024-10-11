@@ -18,7 +18,7 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - Online purshase process
 
-= Easy acess to contact the staff
+- Easy acess to contact the staff
 
 - Caculator
 
