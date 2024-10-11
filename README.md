@@ -45,7 +45,7 @@ CSS
 
   - MySQL: For user storage to save user data and preferences.
   
-  - API: Third party APIs for fetching insurance data.
+  - API: Third party APIs for insurance data.
   
   - VS for  GitHub for managing code
 
