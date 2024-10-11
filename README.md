@@ -12,7 +12,12 @@ transparent privacy policies and create a feedback mechanism for user suggestion
  Many people struggle to compare car insurance options and understand their coverage needs.
 
 # Features
-- Fair comparison
+
+- Partnerships with Insurers
+
+- Affiliate programs
+
+- Exclusive deals
 
 - Comparison if the car is above or below the market price 
 
