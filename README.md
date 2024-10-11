@@ -17,6 +17,10 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - Affiliate programs
 
+- Merchant
+
+- Score tracking
+
 - Exclusive deals
 
 - Comparison if the car is above or below the market price 
