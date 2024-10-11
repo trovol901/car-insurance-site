@@ -28,8 +28,7 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - Profile for Users
 
-- Search tool bars, for prices, clients budget
-
+- Search tool bars, for prices.
 
 CSS
 ## Technology
