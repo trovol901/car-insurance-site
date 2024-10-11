@@ -17,10 +17,6 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - Affiliate programs
 
-- Score tracking
-
-- Exclusive deals
-
 - Comparison if the car is above or below the market price 
 
 - Online purshase process
@@ -43,10 +39,8 @@ CSS
 ## Technology
 *Frontend*:
 
-  - CSS: Simple CSS for styling the layout and ensuring a clean user interface.
-    
-  - Animations: CSS transitions and animations for enhancing user experience during interactions (like buttons and form submissions).
-
+  - React.js
+   
   - Calculator: A JavaScript-based calculator for estimating insurance costs based on user inputs.-
 
  **Backend**: 
