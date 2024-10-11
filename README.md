@@ -1,4 +1,4 @@
-# Car Insurance Website
+# SafeWheels Car Insurance Website
 
 Developing a site that allows users to compare and purchase car insurance easily. Include a user
 friendly interface, easy to manage, Add an insurance comparison tool with customizable filters and
