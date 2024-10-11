@@ -19,7 +19,7 @@ transparent privacy policies and create a feedback mechanism for user suggestion
 
 - ICBC Autoplan
 
-- Buy, Renew or Options
+- Buy, Renew or Claim
 
 
 
