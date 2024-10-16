@@ -15,7 +15,7 @@ Many potential car buyers find it challenging to compare different vehicles, und
 3- Comparison Tool: Enable users to select multiple cars and compare their features and prices.
 Search Functionality: Implement a search bar to allow users to find specific car models quickly.
 
-
+4- Search Functionality: Implement a search bar to allow users to find specific car models quickly.
 
 ## Technology
 **Frontend**:
