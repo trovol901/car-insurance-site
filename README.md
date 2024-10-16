@@ -24,7 +24,7 @@ The website will allow customers to navigate through the platform to make a fair
 
 
 ## Technology
-*Frontend*:
+**Frontend**:
 
   - React.js
    
