@@ -1,44 +1,29 @@
 # SafeWheels
 
-Site that allows users to compare and purchase car insurance easily. Include a user
-friendly interface, easy to manage, Add an insurance comparison tool with customizable filters and
-side by side comparisons. Include educational resourser to guide the costumer to buy a car,
-Show customer revies and ratings, and sellers avaliation. Implement tools like a personalized caculator.
-Also provides secure purshace options, and FAQ information for support. Esnure data protection and
-transparent privacy policies and create a feedback mechanism for user suggestions.
+Buying a car can be overwhelming with so many options and decisions to make. The Car Selling Store project aims to make this process easier for users by providing a simple online platform to browse and compare cars. Features like a car loan calculator and detailed comparisons will help users understand their options better. This project focuses on creating a user-friendly experience that empowers potential buyers to make informed decisions and find the right car for them.
 
 # Statement
+Many potential car buyers find it challenging to compare different vehicles, understand pricing, and make informed decisions. This project aims to create a user-friendly platform that simplifies the car buying process by providing essential information and tools to help users make informed decisions.
 
-Many people struggle to find a car and compare car insurance options and understand their coverage needs, also struggles with confusion of how the website layout works.
-
-# How does the plataform works:
-The website will allow customers to navigate through the platform to make a fair comparison of car prices and get an estimated insurance quote.
 
 # Features
 
-- Blog
+1- Car Listings: Display a list of available cars with filters for make, model, price range, etc.
 
-- Caculator
+2- Car Loan Calculator: Allow users to calculate estimated monthly payments based on their input.
 
-- Buy, Renew or Claim
+3- Comparison Tool: Enable users to select multiple cars and compare their features and prices.
+Search Functionality: Implement a search bar to allow users to find specific car models quickly.
+
 
 
 ## Technology
 **Frontend**:
+Frontend: ReactJS for the user interface.
 
-  - React.js
-   
-  - Calculator: A JavaScript-based calculator for estimating insurance costs based on user inputs.-
+Backend: Node.js with Express for server-side logic.
 
- **Backend**: 
-  - Node.js: To create a server that handles requests and responses.
+Database: SQl for storing car listings and user data.
 
-  - MySQL: For user storage to save user data and preferences.
-  
-  - API: Third party APIs for insurance data.
-  
+APIs: Use third-party APIs for fetching car specifications and prices.
 
-
-Deployment
-
-- AWS
