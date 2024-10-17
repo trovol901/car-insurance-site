@@ -1,6 +1,6 @@
 # SafeWheels Project - Week 2
 # Diagram: 
-![Diagrama do Banco de Dados](diagram.png)
+![Database Diagram](./Assets/diagram.png)
 
 
 ## Entities:
