@@ -1,4 +1,6 @@
 # SafeWheels Project - Week 2
+![Diagrama do Banco de Dados](diagram.png)
+
 
 ## Step 1: Identify the Entities
 For your car selling platform, the primary entities might include:
