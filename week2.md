@@ -1,4 +1,4 @@
-# SafeWheels Project - Semana 2
+# SafeWheels Project - Week 2
 
 ## Step 1: Identify the Entities
 For your car selling platform, the primary entities might include:
