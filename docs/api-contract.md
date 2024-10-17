@@ -1,4 +1,4 @@
-# API Contract for SafeWheels
+# API for SafeWheels
 
 ## Endpoints
 
