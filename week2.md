@@ -61,5 +61,3 @@ For each table, consider the following CRUD operations:
 - A user can list multiple cars (one-to-many relationship).
 - A user can make multiple transactions (one-to-many relationship).
 - A car can be involved in multiple transactions (many-to-one relationship).
-
-![Diagrama do Banco de Dados](diagram.png)
