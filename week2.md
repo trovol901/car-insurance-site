@@ -1,40 +1,43 @@
-# SafeWheels Project - Semana 2
+# SafeWheels Project - Week 2
+# Diagram: 
+![Diagrama do Banco de Dados](diagram.png)
 
-## Step 1: Identify the Entities
+
+## Entities:
 For your car selling platform, the primary entities might include:
 
 - **Users**: To manage user information and profiles.
 - **Cars**: To store details about the cars available for sale.
 - **Transactions**: To track purchases or inquiries made by users.
 
-## Step 2: Define the Tables and Attributes
+## Tables
 
 ### 1. Users Table
-- **id**: Primary key (Unique identifier for each user)
+- **id**: Primary-key (Unique identifier for each user)
 - **name**: String (User's name)
 - **email**: String (User's email)
 - **password**: String (User's password, hashed)
 - **created_at**: Timestamp (When the user was created)
 
 ### 2. Cars Table
-- **id**: Primary key (Unique identifier for each car)
-- **make**: String (Car manufacturer)
-- **model**: String (Car model)
-- **year**: Integer (Year of manufacture)
-- **price**: Decimal (Price of the car)
-- **description**: Text (Description of the car)
-- **user_id**: Foreign key (Link to the user who listed the car)
+- **id**: Primary-key (Unique identifier for each car)
+- **make**: Car manufacturer
+- **model**: Car model
+- **year**: Year of manufacture
+- **price**: Price of the car
+- **description**: Description of the car
+- **user_id**: Foreign-key (Link to the user who listed the car)
 - **created_at**: Timestamp (When the car was listed)
 
 ### 3. Transactions Table
-- **id**: Primary key (Unique identifier for each transaction)
-- **user_id**: Foreign key (Link to the user making the purchase)
-- **car_id**: Foreign key (Link to the car being purchased)
+- **id**: Primary-key (Unique identifier for each transaction)
+- **user_id**: Foreign-key (Link to the user making the purchase)
+- **car_id**: Foreign-key (Link to the car being purchased)
 - **transaction_date**: Timestamp (Date of the transaction)
-- **amount**: Decimal (Amount paid)
+- **amount**: Amount paid
 
-## Step 5: Discuss CRUD Operations
-For each table, consider the following CRUD operations:
+## CRUD Operations
+For each table, CRUD operations:
 
 ### Users Table:
 - **Create**: Register a new user.
@@ -54,9 +57,7 @@ For each table, consider the following CRUD operations:
 - **Update**: Update transaction information.
 - **Delete**: Remove a transaction record.
 
-## Step 3: Define Relationships
+## Relationships
 - A user can list multiple cars (one-to-many relationship).
 - A user can make multiple transactions (one-to-many relationship).
 - A car can be involved in multiple transactions (many-to-one relationship).
-
-![Diagrama do Banco de Dados](diagram.png)
