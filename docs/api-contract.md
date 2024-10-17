@@ -1,5 +1,4 @@
 # API for SafeWheels
-![API Summary](./assets/summary-api.png)
 
 
 # Details:
