@@ -1,0 +1,22 @@
+{
+  "name": "car-insurance-site",
+  "version": "1.0.0",
+  "description": "Buying a car can be overwhelming with so many options and decisions to make. The Car Selling Store project aims to make this process easier for users by providing a simple online platform to browse and compare cars. Features like a car loan calculator and detailed comparisons will help users understand their options better. This project focuses on creating a user-friendly experience that empowers potential buyers to make informed decisions and find the right car for them.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0"
+  }
+}
