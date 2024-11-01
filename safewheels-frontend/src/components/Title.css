@@ -1,0 +1,38 @@
+.exo-2-light {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 100;
+}
+
+.exo-2-bold {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 1000;
+  font-size: 5em; /* Adjust the size as needed */
+}
+
+.pt-sans-narrow-regular {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+}
+
+.pt-sans-narrow-bold {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exo-2-bold {
+  font-family: "Exo 2", sans-serif;
+  font-weight: 900;
+  font-size: 5em;
+  animation: fadeIn 2s ease-in-out;
+}
