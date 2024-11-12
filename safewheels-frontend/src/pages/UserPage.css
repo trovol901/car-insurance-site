@@ -1,0 +1,26 @@
+.user-page {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.back-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 8px 16px;
+  background-color: #282c34;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #61dafb;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

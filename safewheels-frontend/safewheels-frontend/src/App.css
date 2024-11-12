@@ -1,0 +1,22 @@
+/* Posição do botão de calculadora no canto superior direito */
+.calculator-button {
+  position: fixed;
+  top: 20px;
+  right: 90px; /* Ajuste para que o botão User fique ao lado */
+  z-index: 10;
+}
+
+.user-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.user-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
