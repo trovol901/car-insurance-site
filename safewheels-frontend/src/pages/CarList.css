@@ -73,7 +73,7 @@
   bottom: 0;
   right: 0;
   z-index: -99999;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 .button-86::before {
@@ -138,6 +138,12 @@
   border-radius: 10px;
   background-color: #f9f9f9;
   text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.car-details:hover {
+  transform: scale(1.05);
 }
 
 .car-image {
@@ -161,4 +167,24 @@
 .bio-section.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+.filter-form {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-form button {
+  padding: 8px 16px;
 }
