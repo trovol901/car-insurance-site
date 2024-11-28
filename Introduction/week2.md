@@ -1,7 +1,4 @@
 # SafeWheels Project - Week 2
-# Diagram: 
-![Database Diagram](./assets/diagram.png)
-
 
 ## Entities:
 For your car selling platform, the primary entities might include:
