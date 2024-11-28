@@ -148,7 +148,9 @@
 
 .car-image {
   max-width: 100%;
-  height: auto;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -187,4 +189,46 @@
 
 .filter-form button {
   padding: 8px 16px;
+}
+
+.favorite-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.favorite-button:hover {
+  background-color: #ff8a50;
+  transform: scale(1.05);
+}
+
+.favorite-active {
+  background-color: #4caf50;
+}
+
+.favorite-active:hover {
+  background-color: #66bb6a;
+}
+
+.request-info-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.request-info-button:hover {
+  background-color: #3399ff;
+  transform: scale(1.05);
 }

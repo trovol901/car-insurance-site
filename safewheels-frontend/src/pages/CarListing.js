@@ -8,19 +8,51 @@ const CarList = () => {
   const [isCarVisible, setIsCarVisible] = useState(false);
   const [isCalculatorVisible, setIsCalculatorVisible] = useState(false);
   const [filterCriteria, setFilterCriteria] = useState({
-    make: '',
-    model: '',
     price_min: '',
     price_max: '',
+    type: '',
   });
+  const [favorites, setFavorites] = useState([]);
   const navigate = useNavigate();
 
   const fetchCars = async (filters = {}) => {
     try {
       const params = new URLSearchParams(filters);
       const response = await fetch(`http://localhost:3939/api/cars?${params.toString()}`);
-      const data = await response.json();
-      setCars(data);
+      if (response.ok) {
+        const carsData = [
+          {
+            id: 1,
+            make: 'Toyota',
+            model: 'Camry',
+            year: 2020,
+            price: 20000,
+            description: 'Well-maintained car with low mileage.',
+            image: 'car1.jpg',
+            type: 'Sedan',
+          },
+          {
+            id: 2,
+            make: 'Audi',
+            model: 'R8',
+            year: 2019,
+            price: 60000,
+            description: 'Luxury sports car with excellent performance.',
+            image: 'car2.jpg',
+            type: 'Sports',
+          },
+        ];
+        const filteredCars = carsData.filter((car) => {
+          const minPrice = filterCriteria.price_min ? parseFloat(filterCriteria.price_min) : 0;
+          const maxPrice = filterCriteria.price_max ? parseFloat(filterCriteria.price_max) : Infinity;
+          const matchesType = filterCriteria.type ? car.type === filterCriteria.type : true;
+
+          return car.price >= minPrice && car.price <= maxPrice && matchesType;
+        });
+        setCars(filteredCars);
+      } else {
+        setCars([]);
+      }
     } catch (error) {
       console.error('Error fetching car data:', error);
     }
@@ -45,8 +77,20 @@ const CarList = () => {
     fetchCars(filterCriteria);
   };
 
+  const toggleFavorite = (car) => {
+    if (favorites.includes(car)) {
+      setFavorites(favorites.filter((f) => f !== car));
+    } else {
+      setFavorites([...favorites, car]);
+    }
+  };
+
   const goToUserPage = () => {
     navigate('/user');
+  };
+
+  const handleCarClick = (car) => {
+    navigate(`/cars/${car.id}`);
   };
 
   useEffect(() => {
@@ -74,20 +118,6 @@ const CarList = () => {
         <>
           <form className="filter-form" onSubmit={handleFilterSubmit}>
             <input
-              type="text"
-              name="make"
-              placeholder="Make"
-              value={filterCriteria.make}
-              onChange={handleFilterChange}
-            />
-            <input
-              type="text"
-              name="model"
-              placeholder="Model"
-              value={filterCriteria.model}
-              onChange={handleFilterChange}
-            />
-            <input
               type="number"
               name="price_min"
               placeholder="Min Price"
@@ -101,36 +131,53 @@ const CarList = () => {
               value={filterCriteria.price_max}
               onChange={handleFilterChange}
             />
+            <select
+              name="type"
+              value={filterCriteria.type}
+              onChange={handleFilterChange}
+              className="filter-select"
+            >
+              <option value="">Select Type</option>
+              <option value="Sedan">Sedan</option>
+              <option value="SUV">SUV</option>
+              <option value="Truck">Truck</option>
+            </select>
             <button className="button-86" type="submit">
               Apply Filters
             </button>
           </form>
 
-          {cars.length > 0 && (
-            <div className="car-grid">
-              <div className="car-details">
-                <img src="car1.jpg" alt="Car" className="car-image" />
+          <div className="car-grid">
+            {cars.map((car) => (
+              <div key={car.id} className="car-details" onClick={() => handleCarClick(car)}>
+                <img src={car.image} alt={`${car.make} ${car.model}`} className="car-image" />
                 <h3>
-                  {cars[0].make} {cars[0].model}
+                  {car.make} {car.model}
                 </h3>
-                <p>Year: {cars[0].year}</p>
-                <p>Price: ${Number(cars[0].price).toFixed(2)}</p>
-                <p>{cars[0].description}</p>
+                <p>Year: {car.year}</p>
+                <p>Price: ${Number(car.price).toFixed(2)}</p>
+                <p>{car.description}</p>
+                <button
+                  className={`favorite-button ${favorites.includes(car) ? 'favorite-active' : ''}`}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    toggleFavorite(car);
+                  }}
+                >
+                  {favorites.includes(car) ? 'Unfavorite' : 'Add to Favorites'}
+                </button>
+                <button
+                  className="button-86 request-info-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    console.log(`Request more info for Car ID ${car.id}`);
+                  }}
+                >
+                  Request More Info
+                </button>
               </div>
-
-              {cars.length > 1 && (
-                <div className="car-details">
-                  <img src="car2.jpg" alt="Car" className="car-image" />
-                  <h3>
-                    {cars[1].make} {cars[1].model}
-                  </h3>
-                  <p>Year: {cars[1].year}</p>
-                  <p>Price: ${Number(cars[1].price).toFixed(2)}</p>
-                  <p>{cars[1].description}</p>
-                </div>
-              )}
-            </div>
-          )}
+            ))}
+          </div>
         </>
       )}
 
@@ -147,29 +194,17 @@ const CarList = () => {
 
       {isCalculatorVisible && <Calculator />}
 
+      <button className="button-86 add-button" style={{ position: 'fixed', bottom: '20px', right: '20px' }}>Add</button>
+
       <div className="bio-section">
         <h2>Blog</h2>
-        <p>One might wonder if right now is a good or a bad time to invest in a new vehicle. Past data shows that December continually rates as the best month to purchase a vehicle. But we're past December, now what? We're also at the end of the period (January through April) that typically see the least amount of discounts. So, you'll want to take advantage of the upcoming period, May through September, which tends to see more car-buying deals.
-
-While there are pros and cons to purchasing a new automobile, we here at Berkshire Hathaway Automotive are here to provide you with information that will help you make a wise choice regarding whether or not it's the right time for you to buy.
-
-Gas Prices
-
-Unfortunately, gas prices have been creeping up lately. There's no need to panic, but we want to point out that the newer vehicles tend to be very efficient in fuel efficiency ratings. You'll end up saving more in the long run, especially if your current ride is quite old.
-
-Available Funds
-
-If you've received stimulus money or a tax refund, this might be the down payment that you're looking for. If you've been trying to gather enough money to get a new vehicle but couldn't find a little bit of money to put towards the initial investment, now may be a perfect time.
-
-Slower Output
-
-The demand for new vehicles has increased a bit, but this makes shopping at our dealership even more competitive than usual because of the lower supply. We have all of our models priced to sell, and we may have several incentives available on behalf of the manufacturer. We have a steady stream of vehicles coming in, so we encourage you to check out what we have at the moment.
-
-Getting Ahead of the Game
-
-It's likely that 2022 is going to be a big year for the automotive industry as they're all planning some pretty big releases. That means that this year's models are priced to sell. You'll get a lot for your money regarding features included, technology, safety, upgrades, etc.
-
-If you would like to look at some of the new automobile models available at our family of dealerships, find a dealership near you today.</p>
+        <p>
+          One might wonder if right now is a good or a bad time to invest in a new vehicle.
+          Past data shows that December continually rates as the best month to purchase a vehicle.
+          But we're past December, now what? We're also at the end of the period (January through April) that typically see the least amount of discounts. So, you'll want to take advantage of the upcoming period, May through September, which tends to see more car-buying deals.
+          <br />
+          If you would like to look at some of the new automobile models available at our family of dealerships, find a dealership near you today.
+        </p>
       </div>
     </div>
   );

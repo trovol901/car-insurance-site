@@ -22,8 +22,7 @@ const UserPage = () => {
       });
 
       if (response.ok) {
-        const data = await response.json();
-        alert(`Login successful! Welcome, ${data.user.name}`);
+        navigate('/');
       } else {
         setErrorMessage('Login failed. Please check your credentials.');
       }
@@ -41,13 +40,14 @@ const UserPage = () => {
     <div className="user-page">
       <button className="back-button" onClick={handleBackClick}>Back</button>
       <h1>User Information</h1>
-      <form onSubmit={handleLogin}>
-        <label htmlFor="email">USER:</label>
+      <form onSubmit={handleLogin} className="login-form">
+        <label htmlFor="email">User:</label>
         <input
           type="email"
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          className="input-field"
         />
 
         <label htmlFor="password">Password:</label>
@@ -56,11 +56,12 @@ const UserPage = () => {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
         />
 
-        <button type="submit">Enter</button>
+        <button type="submit" className="login-button">Enter</button>
       </form>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+      {errorMessage && <div className="error-box">{errorMessage}</div>}
     </div>
   );
 };
