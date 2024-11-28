@@ -2,7 +2,6 @@
 
 Buying a car can be overwhelming with so many options and decisions to make. That's where SafeWheels comes in. Our goal is to make the car buying process as simple and stress-free as possible by offering an easy to use online platform where users can browse and compare cars. With features like a car loan calculator and detailed car comparisons, SafeWheels helps users understand their options better. We focus on creating a friendly for users experience that gives potential buyers the confidence to make informed decisions and find the perfect car for their needs.
 
-
 
 # Target Audience
 
