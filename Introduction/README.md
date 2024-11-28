@@ -29,7 +29,6 @@ The API contract defines the endpoints used to interact with the SafeWheels back
 
 - **GET /api/cars**: Retrieve a list of available cars, with optional filters for make, model, and price range.
 - **POST /api/calculate-loan**: Accept user input to calculate an estimated car loan payment.
-- **GET /api/car/\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*****:id**: Retrieve details for a specific car by its ID.
 - **POST /api/compare**: Accept a list of car IDs to compare their features and pricing.
 
 For a more detailed breakdown of each endpoint, refer to the API contract documentation:
