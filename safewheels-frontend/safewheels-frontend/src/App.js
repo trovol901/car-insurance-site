@@ -1,8 +1,10 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import CarListing from './pages/CarListing'; // Atualizado para 'CarListing'
+import CarListing from './pages/CarListing';
 import UserPage from './pages/UserPage';
+import CarDetails from './pages/CarDetails';
+import AddCar from './pages/AddCar';
 import Navbar from './components/Navbar';
 import Title from './components/Title';
 
@@ -27,9 +29,11 @@ function App() {
         <Navbar />
         <Title />
         <Routes>
-          <Route path="/" element={<CarListing />} /> {/* Atualizado para 'CarListing' */}
+          <Route path="/" element={<CarListing />} />
           <Route path="/profile" element={<UserPage token={token} />} />
           <Route path="/user" element={<UserPage />} />
+          <Route path="/cars/:id" element={<CarDetails />} />
+          <Route path="/add-car" element={<AddCar />} />
         </Routes>
       </Router>
     </div>
@@ -37,3 +41,4 @@ function App() {
 }
 
 export default App;
+
